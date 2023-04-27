@@ -14,49 +14,73 @@ import {
 function App() {
   return (
     <>
-    <View>
+      <ScrollView>
+        <View style={{flexDirection: 'row'}}>
+          <Image
+            style={styles.banner}
+            source={require('./assets/img/bg.jpg')}
+          />
+        </View>
 
-      <View style={{flexDirection:'row'}}>
-        <Image style={styles.banner} source={require('./assets/img/bg.jpg')} />
-      </View>
+        <View style={styles.contenedor}>
+          <Text style={styles.titulo}>Que hacer en París</Text>
 
-      <View style={styles.contenedor}>
-        <Text style={styles.titulo}>Que hacer en París</Text>
+          <ScrollView horizontal>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={require('./assets/img/actividad1.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={require('./assets/img/actividad2.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={require('./assets/img/actividad3.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={require('./assets/img/actividad4.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={require('./assets/img/actividad5.jpg')}
+              />
+            </View>
+          </ScrollView>
 
-        <ScrollView horizontal >
+          <Text style={styles.titulo}>Los mejores alojamientos</Text>
           <View>
-            <Image
-              style={styles.ciudad}
-              source={require('./assets/img/actividad1.jpg')}
-            />
+            <View>
+              <Image
+                style={styles.mejoresDestinos}
+                source={require('./assets/img/mejores1.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.mejoresDestinos}
+                source={require('./assets/img/mejores2.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.mejoresDestinos}
+                source={require('./assets/img/mejores3.jpg')}
+              />
+            </View>
           </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={require('./assets/img/actividad2.jpg')}
-            />
-          </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={require('./assets/img/actividad3.jpg')}
-            />
-          </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={require('./assets/img/actividad4.jpg')}
-            />
-          </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={require('./assets/img/actividad5.jpg')}
-            />
-          </View>
-        </ScrollView>
-      </View>
-    </View>
+        </View>
+      </ScrollView>
     </>
   );
 }
@@ -67,19 +91,23 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contenedor: {
-    marginHorizontal:10
+    marginHorizontal: 10,
   },
   titulo: {
     color: '#000',
-    fontWeight:'bold',
-    marginVertical:20,
+    fontWeight: 'bold',
+    marginVertical: 20,
   },
-  ciudad:{
-    width:250,
-    height:300,
-    marginRight:10,
+  ciudad: {
+    width: 250,
+    height: 300,
+    marginRight: 10,
   },
-
+  mejoresDestinos:{
+    width:'100%',
+    height:200,
+    marginVertical:5,
+  }
 });
 
 export default App;
